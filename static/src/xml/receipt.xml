@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        <template id="template" xml:space="preserve">
+            <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+                <xpath expr="//t[@t-foreach='receipt.orderlines']" position="inside">
+                        <div class="pos-receipt-left-padding">
+                            <span>
+                                Owner:
+                            </span>
+                            <t t-esc="line.product_owner_id[1]"/>
+                        </div>
+                </xpath>
+            </t>
+        </template>
